@@ -1,0 +1,48 @@
+.windowControls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ctrlBtn {
+  width: 29px;
+  height: 29px;
+  border-radius: 0.29rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1.5px solid transparent;
+  transition: background 0.18s, border 0.18s;
+  box-shadow: none;
+  cursor: pointer;
+  outline: none;
+}
+.ctrlBtn:active {
+  transform: scale(0.96);
+}
+.ctrlBtn:hover {
+  background: #232323;
+  border: 1.5px solid #3a3a3a;
+}
+
+.ctrlBtn.close {
+  background: transparent;
+  border: 1.5px solid transparent;
+}
+.ctrlBtn.close:hover {
+  background: #a91b1b;
+  border: 1.5px solid #e63946;
+}
+
+.ctrlIcon {
+  display: block;
+  width: 21px;
+  height: 21px;
+  stroke: #e6e6e6;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.ctrlBtn.close .ctrlIcon {
+  stroke: #fff;
+}

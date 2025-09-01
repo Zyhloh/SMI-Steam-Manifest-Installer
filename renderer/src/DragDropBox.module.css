@@ -1,0 +1,56 @@
+.dropBox {
+  background: rgba(28,29,34,0.93);
+  border: 2.5px dashed #e6b800cc;
+  border-radius: 1.35rem;
+  box-shadow: 0 4px 36px 0 #0005, 0 2.5px 0 0 #fff1;
+  padding: 3.2rem 2.5rem 3rem 2.5rem;
+  margin: 2.2rem auto 2.8rem auto;
+  max-width: 660px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border 0.22s cubic-bezier(.4,0,.2,1), background 0.22s cubic-bezier(.4,0,.2,1), box-shadow 0.22s cubic-bezier(.4,0,.2,1), transform 0.18s cubic-bezier(.4,0,.2,1);
+  outline: none;
+}
+
+.dropBox:hover {
+  border: 2.5px dashed #ffe066;
+  background: rgba(34,36,40,0.98);
+  box-shadow: 0 8px 40px 0 #e6b80022, 0 4px 24px 0 #0005;
+  transform: scale(1.03);
+}
+.active {
+  background: rgba(38,40,46,1);
+  border-color: #ffea70;
+  box-shadow: 0 12px 48px 0 #e6b80044, 0 8px 36px 0 #0007;
+  transform: scale(1.045);
+}
+.active {
+  background: rgba(34,36,40,0.99);
+  border-color: #e6b800;
+  box-shadow: 0 4px 24px 0 #0005;
+}
+.iconRow {
+  margin-bottom: 1.2rem;
+}
+.iconRow svg {
+  width: 68px;
+  height: 68px;
+}
+.dropText {
+  color: #f7f8fa;
+  font-size: 1.45rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+.dropSubtext {
+  color: #b0b6be;
+  font-size: 0.99rem;
+  font-weight: 400;
+  margin-top: 0.18em;
+  display: block;
+}

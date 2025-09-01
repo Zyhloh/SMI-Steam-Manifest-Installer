@@ -1,0 +1,53 @@
+.steamBtn {
+  position: fixed;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
+  background: rgba(20,20,20,0.95);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 2.5px solid transparent;
+  transition: box-shadow 0.35s cubic-bezier(.4,2,.3,1), border-color 0.35s cubic-bezier(.4,2,.3,1), transform 0.25s cubic-bezier(.4,2,.3,1);
+  z-index: 50;
+}
+.steamBtn:hover {
+  transform: scale(1.11);
+  box-shadow: 0 12px 32px 0 rgba(0,0,0,0.35), 0 0 0 4px #e6b80033;
+  /* border-color intentionally not set so state color stays */
+}
+
+.steamBtnImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  user-select: none;
+  pointer-events: none;
+}
+.pulseRed {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 0 #dc262640, 0 0 10px 2px #dc262640;
+  animation: pulseRedGlow 2.8s cubic-bezier(.4,0,.2,1) infinite;
+}
+@keyframes pulseRedGlow {
+  0% { box-shadow: 0 0 0 0 #dc262640, 0 0 10px 2px #dc262640; }
+  70% { box-shadow: 0 0 0 10px #dc262600, 0 0 18px 6px #dc262640; }
+  100% { box-shadow: 0 0 0 0 #dc262640, 0 0 10px 2px #dc262640; }
+}
+
+.pulseGreen {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 0 #22c55e40, 0 0 10px 2px #22c55e40;
+  animation: pulseGreenGlow 2.8s cubic-bezier(.4,0,.2,1) infinite;
+}
+@keyframes pulseGreenGlow {
+  0% { box-shadow: 0 0 0 0 #22c55e40, 0 0 10px 2px #22c55e40; }
+  70% { box-shadow: 0 0 0 10px #22c55e00, 0 0 18px 6px #22c55e40; }
+  100% { box-shadow: 0 0 0 0 #22c55e40, 0 0 10px 2px #22c55e40; }
+}
+

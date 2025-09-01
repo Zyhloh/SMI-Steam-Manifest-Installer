@@ -1,0 +1,60 @@
+{
+  "name": "SMI",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "build:react": "npm run build --prefix renderer",
+    "pack": "npm run build:react && electron-builder --dir",
+    "dist": "npm run build:react && electron-builder",
+    "start:react": "cross-env BROWSER=none npm start --prefix renderer",
+    "start:electron": "wait-on tcp:3000 && electron .",
+    "start": "concurrently \"npm run start:react\" \"npm run start:electron\""
+  },
+  "keywords": [],
+  "author": "Zyhloh",
+  "license": "MIT",
+  "description": "SMI - Electron, React, Tailwind desktop app.",
+  "dependencies": {
+    "adm-zip": "^0.5.16",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "sync-request": "^6.1.0",
+    "uuid": "^11.1.0"
+  },
+  "build": {
+    "appId": "com.zyhloh.smi",
+    "productName": "SMI",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/build/**/*",
+      "resources/**/*"
+    ],
+    "directories": {
+      "buildResources": "resources"
+    },
+    "win": {
+      "icon": "resources/icon.ico",
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^37.2.1",
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "autoprefixer": "^10.4.21",
+    "babel-loader": "^10.0.0",
+    "concurrently": "^9.2.0",
+    "cross-env": "^7.0.3",
+    "electron-builder": "^26.0.12",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11",
+    "wait-on": "^8.0.3"
+  }
+}

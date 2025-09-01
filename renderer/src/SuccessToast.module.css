@@ -1,0 +1,25 @@
+.toast {
+  position: fixed;
+  bottom: 2.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 250px;
+  max-width: 90vw;
+  background: rgba(34, 40, 34, 0.98);
+  color: #22c55e;
+  border: 2px solid #22c55e;
+  border-radius: 0.9em;
+  box-shadow: 0 4px 32px 0 #22c55e33, 0 1.5px 0 0 #fff2;
+  padding: 1em 1.7em 1em 1.1em;
+  font-size: 1.14rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0.97;
+  animation: fadeInToast 0.32s cubic-bezier(.4,0,.2,1);
+}
+@keyframes fadeInToast {
+  from { opacity: 0; transform: translateX(-50%) translateY(16px); }
+  to { opacity: 0.97; transform: translateX(-50%) translateY(0); }
+}
